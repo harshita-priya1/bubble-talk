@@ -31,7 +31,7 @@ const Send = ({ onSend, typing, istyping, handler }) => {
         onChange={subHandler}
       />
       <button
-        className="bg-blue-500 text-white px-4 py-2 ml-2 rounded"
+        className="bg-btn text-white px-4 py-2 ml-2 rounded"
         onClick={handleSend}
       >
         Send

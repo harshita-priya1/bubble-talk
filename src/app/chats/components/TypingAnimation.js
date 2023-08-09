@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import lottie from "lottie-web";
-import animationData from "../assets/animations/animation_lkrpqaom.json"; // Replace with the path to your Lottie JSON file
+import animationData from "../assets/animation_lkrpqaom.json"; // Replace with the path to your Lottie JSON file
 
 const TypingAni = ({ width, height }) => {
   const containerRef = useRef(null);

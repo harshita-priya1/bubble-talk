@@ -128,11 +128,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-100">
       {/* Navbar */}
-      <nav className="bg-purple-800 text-white p-4 flex items-center justify-between">
-        <h1 className="text-lg font-semibold">Sharito</h1>
+      <nav className="bg-eled text-white p-4 flex items-center justify-between">
+        <h1 className="text-lg font-semibold">Bubble Talk!💬</h1>
         <div className="space-x-2">
           <button
-            className="text-white bg-purple-700 hover:bg-purple-600 px-3 py-2 rounded"
+            className="text-white bg-btn hover:bg-btnh px-3 py-2 rounded"
             onClick={() => {
               router.push("/chats");
             }}
@@ -140,7 +140,7 @@ export default function Home() {
             Chats
           </button>
           <button
-            className="text-white bg-purple-700 hover:bg-purple-600 px-3 py-2 rounded"
+            className="text-white bg-btn hover:bg-btnh px-3 py-2 rounded"
             onClick={() => {
               setIsUserPosts((prev) => !prev);
             }}
@@ -149,7 +149,7 @@ export default function Home() {
           </button>
 
           <button
-            className="text-white bg-red-600 hover:bg-red-500 px-3 py-2 rounded"
+            className="text-white bg-btn hover:bg-btnh px-3 py-2 rounded"
             onClick={handleLogout}
           >
             Logout
@@ -158,29 +158,29 @@ export default function Home() {
       </nav>
 
       {/* Main Content */}
-      <div className="flex flex-1 items-center justify-center bg-gray-100 p-4">
+      <div className="flex flex-1 items-center justify-center bg-bgd p-4">
         <div className="max-w-xl w-full space-y-4">
           <div className="flex justify-center mt-4 gap-4 text-center pb-6">
             <button
-              className="bg-purple-800 text-white py-2 px-4 rounded shadow hover:bg-purple-700 w-full sm:w-auto"
+              className="bg-btn text-white py-2 px-4 rounded shadow hover:bg-btnh w-full sm:w-auto"
               onClick={handleRefresh}
             >
               Refresh
             </button>
             {currentPage > 1 ? (
               <button
-                className="bg-purple-800 text-white py-2 px-4 rounded shadow hover:bg-purple-700 mr-2"
+                className="bg-btn text-white py-2 px-4 rounded shadow hover:bg-btnh mr-2"
                 onClick={handlePrevPage}
               >
                 Previous
               </button>
             ) : null}
-            <span className="text-purple-800 text-lg font-semibold">
+            <span className="text-btn text-lg font-semibold">
               Page {currentPage} of {totalPages}
             </span>
             {currentPage < totalPages ? (
               <button
-                className="bg-purple-800 text-white py-2 px-4 rounded shadow hover:bg-purple-700 ml-2"
+                className="bg-btn text-white py-2 px-4 rounded shadow hover:bg-btnh ml-2"
                 onClick={handleNextPage}
               >
                 Next
@@ -192,11 +192,11 @@ export default function Home() {
           {posts.map((post) => (
             <div
               key={post._id}
-              className="bg-white rounded-lg shadow p-4 transition-transform transform hover:-translate-y-2"
+              className="bg-elel rounded-lg shadow p-4 transition-transform transform hover:-translate-y-2"
             >
               {isUserPosts ? (
                 <button
-                  className="bg-purple-800 text-white py-2 px-4 mx-2 my-2 rounded shadow hover:bg-purple-700 ml-2"
+                  className="bg-btn text-white py-2 px-4 mx-2 my-2 rounded shadow hover:bg-btnh ml-2"
                   onClick={() => {
                     console.log(
                       "delete post:",
@@ -223,7 +223,7 @@ export default function Home() {
                 {post.creatorName}
               </p>
               <p className="text-gray-600 mb-4">{post.description}</p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-500 text-sm">
                 {new Date(post.date).toDateString()}
               </p>
             </div>
@@ -231,7 +231,7 @@ export default function Home() {
 
           {/* + Button for Create Post */}
           <button
-            className="h-20 w-20 fixed bottom-10 right-10 bg-purple-800 text-white p-4 rounded-full shadow-lg hover:bg-purple-700 text-center text-3xl"
+            className="h-20 w-20 fixed bottom-10 right-10 bg-btn text-white p-4 rounded-full shadow-lg hover:bg-btnh text-center text-3xl"
             onClick={() => setShowModal(true)}
           >
             +

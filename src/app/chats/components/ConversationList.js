@@ -25,7 +25,7 @@ const ConversationList = ({
     console.log(conversation._id);
   };
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h2 className="text-2xl font-semibold mb-4 pt-5">Conversations</h2>
       {conversations.length === 0 ? (
         <p>No conversations found.</p>
@@ -43,12 +43,13 @@ const ConversationList = ({
           {conversations.map((conversation) => (
             <ListItem
               sx={{
-                bgcolor: "grey",
+                bgcolor: "#666C5C",
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 borderRadius: "1rem",
                 ":hover": {
-                  bgcolor: "darkgray",
+                  bgcolor: "#E4DDD6",
+                  color: "#666C5C",
                 },
               }}
               key={conversation._id}
@@ -64,19 +65,11 @@ const ConversationList = ({
               <ListItemText
                 primary={
                   <React.Fragment>
-                    <Typography
-                      sx={{ display: "inline" }}
-                      component="span"
-                      variant="body2"
-                      color="text.primary"
-                      fontFamily={"sans-serif"}
-                      // fontWeight={"bold"}
-                      fontSize={"1.05rem"}
-                    >
+                    <p className="md:text-sm">
                       {conversation.participantNames[0] === user.name
                         ? conversation.participantNames[1].toUpperCase()
                         : conversation.participantNames[0].toUpperCase()}
-                    </Typography>
+                    </p>
                   </React.Fragment>
                 }
                 secondary={<React.Fragment></React.Fragment>}

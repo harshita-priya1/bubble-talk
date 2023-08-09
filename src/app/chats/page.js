@@ -7,6 +7,8 @@ import MessageList from "./components/MessageList";
 import SearchUsers from "./components/SearchUsers";
 import Send from "./components/Send";
 import { useRouter } from "next/navigation";
+import { Icon } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 var socket;
 
@@ -246,34 +248,21 @@ export default function ChatPage() {
 
   return (
     <div>
-      <nav className="bg-purple-800 text-white p-4 flex items-center justify-between">
+      <nav className="bg-eled text-white p-4 flex items-center justify-between">
         <div className="flex items-center">
           <button
-            className="block mr-4 text-white"
+            className={`block mr-4 text-white`}
             onClick={toggleLeftPartVisibility}
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <MenuIcon className="md:hidden" />
           </button>
-          <h1 className="text-lg font-semibold">Sharito</h1>
+          <h1 className="text-lg font-semibold">Bubble Talk!💬</h1>
         </div>
         <div className="space-x-2">
           <button
-            className="text-white bg-purple-700 hover:bg-purple-600 px-3 py-2 rounded"
+            className="text-white bg-btn hover:bg-btnh px-3 py-2 rounded"
             onClick={() => {
-              router.push("/sharito");
+              router.push("/home");
             }}
           >
             Home
@@ -285,17 +274,17 @@ export default function ChatPage() {
             Help
           </button> */}
           <button
-            className="text-white bg-red-600 hover:bg-red-500 px-3 py-2 rounded"
+            className="text-white bg-btn hover:bg-btnh px-3 py-2 rounded"
             onClick={handleLogout}
           >
             Logout
           </button>
         </div>
       </nav>
-      <div className="flex bg-violet-400 h-screen text-white">
+      <div className="flex bg-bgd h-screen text-white">
         {/* Left Sidebar */}
         <div
-          className={`left-0 w-1/4 border-r border-gray-300 p-5 ${
+          className={`left-0 w-1/3 border-r border-bgl p-5 ${
             isLeftPartVisible ? "block max-md:w-full" : "hidden md:block"
           }`}
         >
@@ -316,7 +305,7 @@ export default function ChatPage() {
         </div>
         {/* Right Sidebar */}
         <div
-          className={`w-3/4 p-4 overflow-y-scroll ${
+          className={`w-2/3 p-4 overflow-y-scroll overflow-scroll ${
             isLeftPartVisible ? "max-md:hidden" : "w-full"
           }`}
           ref={scrollContainerRef}
