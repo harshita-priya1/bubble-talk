@@ -9,7 +9,7 @@ export default function Login() {
     email: "",
     password: "",
   });
-  const onSubmit = async (e) => {
+  const onLogin = async (e) => {
     e.preventDefault();
     const email = user.email;
     const password = user.password;
@@ -69,7 +69,7 @@ export default function Login() {
             />
             <button
               type="submit"
-              onClick={onSubmit}
+              onClick={onLogin}
               className="text-xl bg-slate-900 mt-8 p-4 pl-8 pr-8 self-center rounded-2xl"
             >
               Login
