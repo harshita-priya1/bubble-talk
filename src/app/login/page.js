@@ -46,8 +46,8 @@ export default function Login() {
     }
   };
   return (
-    <div className="h-screen flex gap-5 justify-center items-center">
-      <div className="flex flex-col p-8 pl-20 pr-20 rounded-3xl  bg-gray-800">
+    <div className="h-screen flex gap-5 justify-center bg-bgd items-center">
+      <div className="flex flex-col p-8 pl-20 pr-20 rounded-3xl  bg-eled">
         <h1 className="self-center p-5 text-2xl">Login</h1>
         <form className="">
           <div className="flex flex-col gap-4">
@@ -70,7 +70,7 @@ export default function Login() {
             <button
               type="submit"
               onClick={onLogin}
-              className="text-xl bg-slate-900 mt-8 p-4 pl-8 pr-8 self-center rounded-2xl"
+              className="text-xl bg-btn mt-8 p-4 pl-8 pr-8 self-center rounded-2xl hover:bg-btnh"
             >
               Login
             </button>

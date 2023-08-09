@@ -55,18 +55,24 @@ const SearchUsers = ({
         <div>
           <input
             type="text"
-            className="border border-gray-400 px-2 py-1 w-full rounded-full text-black"
+            className="border border-btn px-2 py-1 w-full rounded-full text-black"
             placeholder="Conversation Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <Stack spacing={2} direction="row" padding={2}>
-            <Button onClick={handleClick} variant="contained" color="success">
+            <button
+              onClick={handleClick}
+              className="bg-btn p-2 rounded-md hover:bg-btnh"
+            >
               Start
-            </Button>
-            <Button onClick={handleCancel} variant="contained" color="error">
+            </button>
+            <button
+              onClick={handleCancel}
+              className="bg-btn p-2 rounded-md hover:bg-btnh"
+            >
               Cancel
-            </Button>
+            </button>
           </Stack>
         </div>
       ) : null}
@@ -81,7 +87,7 @@ const SearchUsers = ({
           />
           {inputValue != "" ? (
             <button
-              className="bg-blue-500 text-white px-4 py-2 ml-2 rounded"
+              className="bg-btn text-white px-4 py-2 ml-2 rounded"
               onClick={handleCancel}
             >
               X
@@ -97,12 +103,13 @@ const SearchUsers = ({
           {searchResults.map((user) => (
             <ListItem
               sx={{
-                bgcolor: "powderblue",
+                bgcolor: "#AF7F6F",
+                textDecorationColor: "white",
                 marginTop: "0.5rem",
                 marginBottom: "0.5rem",
                 borderRadius: "1rem",
                 ":hover": {
-                  bgcolor: "darkgray",
+                  bgcolor: "#E4DDD6",
                 },
               }}
               key={user._id}

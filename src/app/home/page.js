@@ -158,7 +158,7 @@ export default function Home() {
       </nav>
 
       {/* Main Content */}
-      <div className="flex flex-1 items-center justify-center bg-bgd p-4">
+      <div className="flex flex-1 min-h-screen  justify-center bg-bgd p-4">
         <div className="max-w-xl w-full space-y-4">
           <div className="flex justify-center mt-4 gap-4 text-center pb-6">
             <button

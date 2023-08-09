@@ -62,8 +62,8 @@ const CreatePostModal = ({ onClose, fetchPosts }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white rounded-lg p-4 shadow-lg flex flex-col items-center justify-center">
-        <h2 className="text-2xl font-semibold mb-4">Create Post</h2>
+      <div className="bg-bgd rounded-lg p-4 shadow-lg flex flex-col items-center justify-center">
+        <h2 className="text-2xl text-btn font-semibold mb-4">Create Post</h2>
         {imagePreview && (
           <img
             src={imagePreview}
@@ -77,7 +77,7 @@ const CreatePostModal = ({ onClose, fetchPosts }) => {
           placeholder="Enter your post description..."
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="border border-gray-400 rounded-lg p-2 mb-4 w-full text-black text"
+          className="border border-eled rounded-lg p-2 mb-4 w-full text-black text"
           rows={4} // You can set the initial number of rows here. The box will expand automatically as needed.
         />
 
@@ -85,7 +85,7 @@ const CreatePostModal = ({ onClose, fetchPosts }) => {
           {/* Add image attachment feature */}
           <label
             htmlFor="image"
-            className="bg-purple-800 text-white px-4 py-2 rounded-lg cursor-pointer"
+            className="bg-btn text-white px-4 py-2 rounded-lg cursor-pointer"
           >
             Attach Image
           </label>
@@ -100,7 +100,7 @@ const CreatePostModal = ({ onClose, fetchPosts }) => {
         <div className="flex justify-end">
           <button
             onClick={handlePostCreate}
-            className="bg-purple-800 text-white px-4 py-2 rounded-lg mr-2"
+            className="bg-btn text-white px-4 py-2 rounded-lg mr-2"
           >
             Post
           </button>
@@ -110,7 +110,7 @@ const CreatePostModal = ({ onClose, fetchPosts }) => {
               setImagePreview(null);
               onClose();
             }}
-            className="bg-red-600 text-white px-4 py-2 rounded-lg"
+            className="bg-eled text-white px-4 py-2 rounded-lg"
           >
             Cancel
           </button>

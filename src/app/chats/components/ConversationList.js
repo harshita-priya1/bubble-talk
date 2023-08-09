@@ -42,6 +42,7 @@ const ConversationList = ({
         >
           {conversations.map((conversation) => (
             <ListItem
+              className="cursor-pointer"
               sx={{
                 bgcolor: "#666C5C",
                 marginTop: "0.5rem",

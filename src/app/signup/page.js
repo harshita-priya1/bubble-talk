@@ -48,8 +48,8 @@ export default function Signup() {
   };
 
   return (
-    <div className="h-screen flex justify-center items-center">
-      <div className="flex flex-col p-8 pl-20 pr-20 rounded-3xl  bg-gray-800">
+    <div className="h-screen flex justify-center items-center bg-bgd">
+      <div className="flex flex-col p-8 pl-20 pr-20 rounded-3xl  bg-eled">
         <h1 className="self-center p-5 text-2xl">Signup Form</h1>
         <form className="" action="">
           <div className="flex flex-col gap-4">
@@ -92,7 +92,7 @@ export default function Signup() {
             <button
               type="submit"
               onClick={onSignup}
-              className="text-xl bg-slate-900 mt-8 p-4 pl-8 pr-8 self-center rounded-2xl"
+              className="text-xl bg-btn mt-8 p-4 pl-8 pr-8 self-center rounded-2xl hover:bg-btnh"
             >
               SignUp
             </button>
